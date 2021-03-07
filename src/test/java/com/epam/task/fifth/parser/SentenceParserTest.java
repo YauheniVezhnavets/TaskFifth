@@ -17,12 +17,12 @@ public class SentenceParserTest {
     private final Parser sentenceParser = new SentenceParser();
 
     @Test
-    public void testParse() {
+    public void testParseShouldParseSentenceToLexeme() {
         //given
 
-        final String text = " Chelsea [6 3 -] [1 0 +] Manchester";
+        final String text = " Chelsea [3 6 -] [1 0 +] Manchester";
         final String FIRST_LEXEME = "Chelsea";
-        final String SECOND_LEXEME = "[6 3 -]";
+        final String SECOND_LEXEME = "[3 6 -]";
         final String THIRD_LEXEME = "[1 0 +]";
         final String FOUR_LEXEME = "Manchester";
 
