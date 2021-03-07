@@ -33,7 +33,7 @@ public class SentenceParser implements Parser {
 
         Composite result = new Composite();
 
-        list.stream().forEach(lexeme->{
+        list.forEach(lexeme->{
             if (lexeme.matches(REG_EXPRESSION)){
                 result.add(Leaf.expression(lexeme));
             } else {

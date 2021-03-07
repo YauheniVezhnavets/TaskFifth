@@ -54,14 +54,14 @@ public class TextLogic {
 
 
         for (Component lexeme : lexemes) {
-            String word ;
+
             if (((Leaf) lexeme).getLeafType() == LeafType.EXPRESSION) {
-                word = calculate(lexeme).toString();
+                lexeme = calculate(lexeme);
             }
-            word = lexeme.toString();
+            String  word = lexeme.toString();
             stringBuilders.append(word).append(" ");
         }
 
-        return stringBuilders.toString();
+        return stringBuilders.toString().trim();
     }
 }
